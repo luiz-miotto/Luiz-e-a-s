@@ -10,6 +10,8 @@ console.log(`customAmount is equal to ${customAmount}. defaultSquareValue is ${d
 var ids = Array.from(Array(defaultSquareValue).keys());
 divRemover();
 newDivGenerator(ids);
+let getId2 = document.querySelectorAll(".divClass");
+newMouseOver(getId2);
 
 });
 
@@ -58,13 +60,23 @@ function divRemover(){ids.forEach(function(e){
 
 
 
- const getId2 = document.querySelectorAll(".divClass");
+ let getId2 = document.querySelectorAll(".divClass");
 
+ let colorHoverChanger = mouseOver();
+
+ function mouseOver(){
  getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
  { console.log(thiscanbewhatever.id);
 document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
 }));
+ }
 
+ function newMouseOver(getId2){
+   getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
+   { console.log(thiscanbewhatever.id);
+  document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
+  }));
+   }
 /*
 
 function initialValue(defaultSquareValue){
