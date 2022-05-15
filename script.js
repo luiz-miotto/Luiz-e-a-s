@@ -67,14 +67,14 @@ function divRemover(){ids.forEach(function(e){
  function mouseOver(){
  getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
  { console.log(thiscanbewhatever.id);
-document.getElementById(thiscanbewhatever.id).style.backgroundColor = "rgb(238, 130, 238)";
+document.getElementById(thiscanbewhatever.id).style.backgroundColor = generateRGBValue();
 }));
  }
 
  function newMouseOver(getId2){
    getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
    { console.log(thiscanbewhatever.id);
-  document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
+  document.getElementById(thiscanbewhatever.id).style.backgroundColor = generateRGBValue();
   }));
    }
 
@@ -83,8 +83,8 @@ document.getElementById(thiscanbewhatever.id).style.backgroundColor = "rgb(238, 
       var   redValue = redFunction();
       var   greenValue = greenFunction();
       var   blueValue = blueFunction();
-   var   randomRGBValue = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
-   console.log(`the rgb value is ${randomRGBValue}`);
+      var   randomRGBValue = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
+   return randomRGBValue;
    }
 
    function redFunction(){
