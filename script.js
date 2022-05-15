@@ -16,11 +16,7 @@ newMouseOver(getId2);
 });
 
 
-var newSquaresPerSide = document.getElementById("newSquaresPerSide");
-newSquaresPerSide.addEventListener("click",(defaultSquareValue) => {
-   buttonFunctionTwo(defaultSquareValue);
-   console.log("this tells me the button worked");
-})
+
  
 var ids = Array.from(Array(defaultSquareValue).keys());
 
