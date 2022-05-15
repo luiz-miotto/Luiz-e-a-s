@@ -67,7 +67,7 @@ function divRemover(){ids.forEach(function(e){
  function mouseOver(){
  getId2.forEach(thiscanbewhatever => thiscanbewhatever.addEventListener("mouseover", ()=>
  { console.log(thiscanbewhatever.id);
-document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
+document.getElementById(thiscanbewhatever.id).style.backgroundColor = "rgb(238, 130, 238)";
 }));
  }
 
@@ -77,67 +77,25 @@ document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
   document.getElementById(thiscanbewhatever.id).style.backgroundColor = "red";
   }));
    }
-/*
 
-function initialValue(defaultSquareValue){
-   console.log("checks if initialValueGenerator function is running");
-   var defaultSquareValue = x*x;
-   var ids = Array.from(Array(defaultSquareValue).keys());
-   function divGenerator(){ids.forEach(function(e){
-      document.getElementById("container").innerHTML += `
-         <div class="divClass" id=${e}>
-             
-         </div>
-      `;
- 
- 
-  });
- }
- 
- var needDivs = divGenerator();
- 
-}
+   
+  function generateRGBValue(){
+      var   redValue = redFunction();
+      var   greenValue = greenFunction();
+      var   blueValue = blueFunction();
+   var   randomRGBValue = "rgb(" + redValue + ", " + greenValue + ", " + blueValue + ")";
+   console.log(`the rgb value is ${randomRGBValue}`);
+   }
 
-// the function below is not currently used for anything but has not been deleted as it can still be useful
-/*
-function buttonFunctionTwo(defaultSquareValue){ 
-   var ids = Array.from(Array(defaultSquareValue).keys());
-   return function divGenerator(){ids.forEach(function(e){
-      document.getElementById("container").innerHTML += `
-         <div class="divClass" id=${e}>
-             
-         </div>
-      `;
- 
- 
-  });
- }
- 
-}
-*/
+   function redFunction(){
+      return Math.floor(Math.random()*255);
+   }
 
-/*
+   function greenFunction(){
+    return  Math.floor(Math.random()*255);
+   }
 
-let initialValueGenerator = initialValue(defaultSquareValue);
+   function blueFunction(){
+      return Math.floor(Math.random()*255);
+   }
 
-function initialValue(defaultSquareValue){
-   console.log("checks if initialValueGenerator function is running");
-   var x = 40;
-   var defaultSquareValue = x*x;
-   var ids = Array.from(Array(defaultSquareValue).keys());
-   function divGenerator(){ids.forEach(function(e){
-      document.getElementById("container").innerHTML += `
-         <div class="divClass" id=${e}>
-             
-         </div>
-      `;
- 
- 
-  });
- }
- 
- var needDivs = divGenerator();
- 
-}
-
-*/
